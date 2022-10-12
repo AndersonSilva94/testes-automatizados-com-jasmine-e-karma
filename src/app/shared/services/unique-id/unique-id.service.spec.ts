@@ -6,4 +6,14 @@ describe(UniqueIdService.name, () => {
     const id = service.generateUniqueIdWithPrefix('app');
     expect(id.startsWith('app-')).toBe(true);
   });
+
+  it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should not generate duplicate id when called multiple times`, () => {
+    const service = new UniqueIdService();
+    const ids = new Set();
+    for (let i = 0; i < 50; i++) {
+      ids.add(service.generateUniqueIdWithPrefix('app'));
+    };
+
+    expect(ids.size).toBe(50);
+  })
 });
