@@ -34,7 +34,9 @@ describe(UniqueIdService.name, () => {
     should throw when called with empty`, () => {
       const emptyValues = [null, undefined, '', '0', '13'];
       emptyValues.forEach(emptyValue => {
-        expect(() => service.generateUniqueIdWithPrefix(emptyValue)).toThrow() // ao lançar o erro, precisamos passar o expect com uma arrow function
+        expect(() => service.generateUniqueIdWithPrefix(emptyValue)) // ao lançar o erro, precisamos passar o expect com uma arrow function
+          .withContext(`Empty value: ${emptyValue}`) // ele cria um contexto para cada valor, ou seja se um falhar, ele diz qual criou a falha
+          .toThrow()
       })
     })
 });
