@@ -30,9 +30,9 @@ describe(UniqueIdService.name, () => {
     expect(service.getNumberOfGeneratedUniqueIds()).toBe(2)
   });
 
-  it(`${UniqueIdService.prototype.generateUniqueIdWithPrefix.name}
+  it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name}
     should throw when called with empty`, () => {
-      const emptyValues = [null, undefined, ''];
+      const emptyValues = [null, undefined, '', '0', '13'];
       emptyValues.forEach(emptyValue => {
         expect(() => service.generateUniqueIdWithPrefix(emptyValue)).toThrow() // ao lançar o erro, precisamos passar o expect com uma arrow function
       })
