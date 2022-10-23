@@ -41,10 +41,11 @@ describe(LikeWidgetComponent.name, () => {
     expect(component.id).toBe(someId);
   });
 
-  it(`#${LikeWidgetComponent.prototype.like.name} should trigger emission when called`, () => {
+  it(`#${LikeWidgetComponent.prototype.like.name} should trigger emission when called`, done => {
     fixture.detectChanges();
     component.liked.subscribe(() => { // primeiro registro a ação que vai testar a expectativa
       expect(true).toBeTrue();
+      done(); // é de garantia que testes assíncronos (com subscribe e observables) tenham o done ao final para garantir que será realizado com sucesso
     })
     component.like() // depois chama o método que vai disparar a output property
   })
