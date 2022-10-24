@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 106.0.5249.119 (Linux x86_64)" package="" timestamp="2022-10-24T01:28:35" id="0" hostname="anderson-silva-94" tests="8" errors="0" failures="0" time="0.08">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/106.0.5249.119 Safari/537.36"/>
+  </properties>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assinged" time="0.058" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is NOT assinged" time="0.008" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.006" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.005" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate id when called multiple times" time="0.001" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generateIds when called" time="0.001" classname="Chrome_Headless_106_0_5249_119_(Linux_x86_64).UniqueIdService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
