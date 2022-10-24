@@ -25,14 +25,14 @@ describe(LikeWidgetComponent.name, () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should auto generate ID when id input property is missing', () => {
+  it('Should auto-generate ID during ngOnInit when (@Input id) is NOT assinged', () => {
 
     fixture.detectChanges();
 
     expect(component.id).toBeTruthy();
   })
 
-  it('Should NOT generate ID when id input property is present', () => {
+  it('Should NOT auto-generate ID during ngOnInit when (@Input id) is assinged', () => {
     const someId = 'someId';
     component.id = someId;
 
@@ -50,7 +50,7 @@ describe(LikeWidgetComponent.name, () => {
     component.like() // depois chama o método que vai disparar a output property
   }) */
 
-  it(`#${LikeWidgetComponent.prototype.like.name} should trigger emission when called`, () => {
+  it(`#${LikeWidgetComponent.prototype.like.name} should trigger (@Output liked) when called`, () => {
     spyOn(component.liked, 'emit'); // observa um método e faz referência ao método original (cria uma 'cópia') - modifica o método
     fixture.detectChanges();
     component.like();
